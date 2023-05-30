@@ -16,7 +16,7 @@ def winner_name(soup):
 
 def loser_name(soup):
     loser_element = soup.find(
-        'div', class_='loss text-uppercase text-white p-1 m-1')
+        'div')
     if loser_element:
         name_element = loser_element.find_next('h2', class_='h3')
         name = name_element.text.strip()
